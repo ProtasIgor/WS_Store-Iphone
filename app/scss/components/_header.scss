@@ -1,0 +1,119 @@
+.header {
+    font-size: 1rem;
+
+    &__inner {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: height .3s ease;
+
+        @media screen and (max-width: 820px) {
+            min-height: 700px;
+            height: auto;
+        }
+    }
+
+    &__head {
+        background-color: $bg-color-header;
+    }
+
+    &__head-wrapper {
+        margin: 0 auto;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 1200px;
+        min-height: 113px;
+
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        justify-items: center;
+        align-items: center;
+
+
+        @media (max-width: 670px) {
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__nav {
+        justify-self: start;
+
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 0.5em 0.7em;
+        text-decoration: none;
+        color: $color-link;
+        font-size: 1.3em;
+
+        @media screen and (max-width: 820px) {
+            font-size: 1em;
+        }
+    }
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__phone {
+        justify-self: end;
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $bg-color-header-content;
+    }
+
+    &__title {
+        margin: 10px 0;
+        font-family: 'Inter-Bold';
+        font-size: 4em;
+        color: $color-h1;
+
+        @media (max-width: 540px) {
+            font-size: 3em;
+        }
+
+        @media (max-width: 420px) {
+            font-size: 2em;
+        }
+    }
+
+    &__image {
+        display: block;
+        max-width: 60%;
+        height: 50vh;
+        object-fit: contain;
+        object-position: center;
+
+        @media (max-width: 420px) {
+            height: 30vh;
+        }
+    }
+
+    &__button {
+        margin: 20px 0;
+        padding: 22px 0 19px;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        font-size: 1.5em;
+        border-radius: 30px;
+        background-color: $bg-color-header-button;
+        color: $color-header-button;
+    }
+
+}
